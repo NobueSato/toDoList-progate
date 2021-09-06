@@ -1,5 +1,5 @@
 
-##Progate To-do list partial cloning 
+## Progate To-do list partial cloning 
 
 The source code was partially provided by Progate.It's a part of To-do list tutorial course using Node.js + Express + MySQL
 I've been exposed to MySQL at school, so I used MongoDB instead to see how comfortable I am with it.
