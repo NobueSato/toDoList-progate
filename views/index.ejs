@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>LIST</title>
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <header>
+      <a class="header-logo" href="/">LIST</a>
+    </header>
+    <div class="container">
+      <div class="container-header">
+        <h1>To-do List</h1>
+        <a href="/new" class="new-button">+ Add item</a>
+      </div>
+      <div class="index-table-wrapper">
+        <div class="table-head">
+          <span class="name-content-title"> Content</span>
+        </div>
+        <!-- Define the items array -->
+        <ul class="table-body">
+          <!-- Use forEach to print the elements of the items array -->
+          <% todoTasks.forEach((task) => { %>
+           <li>
+              <div class="item-data">
+                </span>
+                <span class="name-column">
+                  <!-- Display the name property of item -->
+                   <%= task.name %>
+                </span>
+              </div>
+              <div class="item-menu">
+                <form action="/delete/<%= task._id %>" method="POST">
+                  <input type="submit" value="Delete">
+                </form>
+                <a href="/edit/<%= task._id %>">Edit</a>
+              </div>
+            </li>
+           <% }) %>
+          
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
